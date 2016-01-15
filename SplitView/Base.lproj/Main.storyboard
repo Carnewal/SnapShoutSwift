@@ -9,7 +9,7 @@
         <!--Shouts-->
         <scene sceneID="Eeq-6N-alD">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="ONR-ru-sYI" customClass="ShoutsViewController" customModule="SplitView" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="ONR-ru-sYI" customClass="ShoutsViewController" customModule="SnapShout" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="wgl-f0-j4c">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,7 +99,7 @@
         <!--Create Shout-->
         <scene sceneID="PI2-IM-ZFn">
             <objects>
-                <tableViewController id="GK2-5q-ewD" customClass="AddShoutViewController" customModule="SplitView" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="GK2-5q-ewD" customClass="AddShoutViewController" customModule="SnapShout" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="3yK-QL-5Vk">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -267,7 +267,7 @@
         <!--Shout Info-->
         <scene sceneID="JtG-u8-naY">
             <objects>
-                <tableViewController id="Mj9-xU-wKl" customClass="ShoutViewController" customModule="SplitView" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Mj9-xU-wKl" customClass="ShoutViewController" customModule="SnapShout" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="b6F-1l-dbH">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -389,7 +389,7 @@
         <!--Empty Detail View Controller-->
         <scene sceneID="7av-eQ-13U">
             <objects>
-                <viewController id="pmA-hE-6co" customClass="EmptyDetailViewController" customModule="SplitView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pmA-hE-6co" customClass="EmptyDetailViewController" customModule="SnapShout" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bnX-YZ-GN7"/>
                         <viewControllerLayoutGuide type="bottom" id="KNt-fJ-djy"/>

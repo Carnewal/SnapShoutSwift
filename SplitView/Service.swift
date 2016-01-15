@@ -22,15 +22,11 @@ class Service
         let path = NSBundle.mainBundle().pathForResource("Properties", ofType: "plist")!
         let properties = NSDictionary(contentsOfFile: path)!
         urlShouts = NSURL(string: (string: properties["baseUrl"] as! String) + "/shouts")!
-        urlShouts = NSURL(string: (string: properties["baseUrl"] as! String) + "/shout")!
+        urlPostShout = NSURL(string: (string: properties["baseUrl"] as! String) + "/shout")!
         session = NSURLSession(configuration: NSURLSessionConfiguration.ephemeralSessionConfiguration())
     }
     
-    func createPostTask() -> NSURLSessionTask {
-        
-    
-    }
-    
+
     
     func createFetchTask(completionHandler: Result<[Shout]> -> Void) -> NSURLSessionTask {
         return session.dataTaskWithURL(urlShouts) {
