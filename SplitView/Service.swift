@@ -28,6 +28,8 @@ class Service
     
 
     
+    
+    
     func createFetchTask(completionHandler: Result<[Shout]> -> Void) -> NSURLSessionTask {
         return session.dataTaskWithURL(urlShouts) {
             data, response, error in

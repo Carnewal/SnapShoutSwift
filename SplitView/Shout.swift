@@ -7,13 +7,15 @@ class Shout
     let message: String
     let date: String
     let location: Location
+    let comments:[String]
     
-    init(id: String, author: String, message: String, date: String, location: Location) {
+    init(id: String, author: String, message: String, date: String, location: Location, comments: [String]) {
         self.id = id
         self.author = author
         self.message = message
         self.date = date
         self.location = location
+        self.comments = comments
     }
     
 }
@@ -38,8 +40,11 @@ extension Shout
         guard let loc = json["loc"] as? [Double] else {
             throw Service.Error.MissingJsonProperty(name: "latitude")
         }
+        guard let comments = json["comments"] as? [String] else {
+            throw Service.Error.MissingJsonProperty(name: "comments")
+        }
         
-        self.init(id: id, author: author, message: message, date: date, location: Location(latitude: loc[0], longitude: loc[1]))
+        self.init(id: id, author: author, message: message, date: date, location: Location(latitude: loc[0], longitude: loc[1]), comments: comments)
         
         
     }
