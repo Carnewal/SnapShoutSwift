@@ -268,7 +268,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </barButtonItem>
-                                <barButtonItem title="Send" id="beH-rt-kkA">
+                                <barButtonItem systemItem="compose" id="beH-rt-kkA">
                                     <connections>
                                         <action selector="sendCommentPressed:" destination="kg4-vc-FgI" id="wlc-V3-HVl"/>
                                     </connections>
@@ -276,11 +276,11 @@
                             </items>
                         </toolbar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="shoutCell" textLabel="4V1-Re-IB0" detailTextLabel="2VQ-cf-zse" style="IBUITableViewCellStyleValue1" id="cse-bl-hai">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentCell" textLabel="4V1-Re-IB0" detailTextLabel="2VQ-cf-zse" style="IBUITableViewCellStyleValue1" id="cse-bl-hai">
                                 <rect key="frame" x="0.0" y="92" width="600" height="27"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cse-bl-hai" id="KDW-t5-jDz">
-                                    <rect key="frame" x="0.0" y="0.0" width="567" height="26"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="26"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4V1-Re-IB0">
@@ -290,12 +290,15 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2VQ-cf-zse" userLabel="I">
-                                            <rect key="frame" x="523" y="3" width="42" height="20"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2VQ-cf-zse">
+                                            <rect key="frame" x="543" y="3" width="42" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
+                                            <string key="userLabel" base64-UTF8="YES">
+CQ
+</string>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -308,6 +311,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Comments" id="ALM-pg-Lq4"/>
                     <connections>
+                        <outlet property="btnComment" destination="beH-rt-kkA" id="wCI-os-PXS"/>
                         <outlet property="tfComment" destination="ZPo-wQ-g0s" id="F6t-fg-Xa7"/>
                     </connections>
                 </tableViewController>
