@@ -9,7 +9,7 @@
         <!--Shouts-->
         <scene sceneID="Eeq-6N-alD">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="ONR-ru-sYI" customClass="ShoutsViewController" customModule="_" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="ONR-ru-sYI" customClass="ShoutsViewController" customModule="SnapShout" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="wgl-f0-j4c">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,7 +99,7 @@
         <!--Create Shout-->
         <scene sceneID="PI2-IM-ZFn">
             <objects>
-                <tableViewController id="GK2-5q-ewD" customClass="AddShoutViewController" customModule="_" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="GK2-5q-ewD" customClass="AddShoutViewController" customModule="SnapShout" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="3yK-QL-5Vk">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -248,6 +248,89 @@
             </objects>
             <point key="canvasLocation" x="3941" y="128"/>
         </scene>
+        <!--Comments-->
+        <scene sceneID="8qX-3s-JJX">
+            <objects>
+                <tableViewController id="kg4-vc-FgI" userLabel="Comments" customClass="CommentViewController" customModule="SnapShout" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="27" sectionHeaderHeight="28" sectionFooterHeight="28" id="hnX-go-c3c">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="o8K-8o-JfB">
+                            <rect key="frame" x="0.0" y="119" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <items>
+                                <barButtonItem style="plain" id="wDl-p9-KfN">
+                                    <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="ZPo-wQ-g0s">
+                                        <rect key="frame" x="20" y="7" width="309" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </barButtonItem>
+                                <barButtonItem title="Send" id="beH-rt-kkA">
+                                    <connections>
+                                        <action selector="sendCommentPressed:" destination="kg4-vc-FgI" id="wlc-V3-HVl"/>
+                                    </connections>
+                                </barButtonItem>
+                            </items>
+                        </toolbar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="shoutCell" textLabel="4V1-Re-IB0" detailTextLabel="2VQ-cf-zse" style="IBUITableViewCellStyleValue1" id="cse-bl-hai">
+                                <rect key="frame" x="0.0" y="92" width="600" height="27"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cse-bl-hai" id="KDW-t5-jDz">
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="26"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4V1-Re-IB0">
+                                            <rect key="frame" x="15" y="3" width="71" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2VQ-cf-zse" userLabel="I">
+                                            <rect key="frame" x="523" y="3" width="42" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="kg4-vc-FgI" id="cvp-bz-W1a"/>
+                            <outlet property="delegate" destination="kg4-vc-FgI" id="5zh-1F-bCk"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Comments" id="ALM-pg-Lq4"/>
+                    <connections>
+                        <outlet property="tfComment" destination="ZPo-wQ-g0s" id="F6t-fg-Xa7"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tD3-j9-eqU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4562" y="909"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ag7-j3-pNY">
+            <objects>
+                <navigationController id="uSh-ZN-N8g" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qGC-gL-jZN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="kg4-vc-FgI" kind="relationship" relationship="rootViewController" id="btB-dU-1gd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2gR-qt-LfH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3824" y="909"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="U1k-iY-1JZ">
             <objects>
@@ -267,7 +350,7 @@
         <!--Shout Info-->
         <scene sceneID="JtG-u8-naY">
             <objects>
-                <tableViewController id="Mj9-xU-wKl" customClass="ShoutViewController" customModule="_" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Mj9-xU-wKl" customClass="ShoutViewController" customModule="SnapShout" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="b6F-1l-dbH">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -341,7 +424,13 @@
                             <outlet property="delegate" destination="Mj9-xU-wKl" id="hgZ-NE-LIg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Shout Info" id="pza-rM-w2B"/>
+                    <navigationItem key="navigationItem" title="Shout Info" id="pza-rM-w2B">
+                        <barButtonItem key="rightBarButtonItem" title="Comments" id="1NJ-vX-XgF">
+                            <connections>
+                                <segue destination="uSh-ZN-N8g" kind="show" id="7G4-jg-8QB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageURL" destination="SbS-uz-vv4" id="BgW-YI-wtB"/>
                         <outlet property="mapView" destination="zyi-VB-ElA" id="NZg-Ux-ZVm"/>
@@ -389,7 +478,7 @@
         <!--Empty Detail View Controller-->
         <scene sceneID="7av-eQ-13U">
             <objects>
-                <viewController id="pmA-hE-6co" customClass="EmptyDetailViewController" customModule="_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pmA-hE-6co" customClass="EmptyDetailViewController" customModule="SnapShout" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bnX-YZ-GN7"/>
                         <viewControllerLayoutGuide type="bottom" id="KNt-fJ-djy"/>
