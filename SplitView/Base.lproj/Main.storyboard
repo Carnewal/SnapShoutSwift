@@ -161,47 +161,13 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="82" id="6EV-Lt-cGu">
-                                        <rect key="frame" x="0.0" y="228" width="600" height="82"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6EV-Lt-cGu" id="xPZ-1O-Tn9">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="81"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password for later removal (or commenting??)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fiv-Kw-CTO">
-                                                    <rect key="frame" x="8" y="43" width="584" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMS-jZ-i1J">
-                                                    <rect key="frame" x="8" y="8" width="74" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Fiv-Kw-CTO" firstAttribute="top" secondItem="SMS-jZ-i1J" secondAttribute="bottom" constant="14" id="NBc-Ff-Azn"/>
-                                                <constraint firstItem="Fiv-Kw-CTO" firstAttribute="bottom" secondItem="xPZ-1O-Tn9" secondAttribute="bottomMargin" id="Vcc-YK-rM5"/>
-                                                <constraint firstItem="Fiv-Kw-CTO" firstAttribute="leading" secondItem="xPZ-1O-Tn9" secondAttribute="leadingMargin" id="fLm-x4-c8x"/>
-                                                <constraint firstItem="Fiv-Kw-CTO" firstAttribute="trailing" secondItem="xPZ-1O-Tn9" secondAttribute="trailingMargin" id="tcQ-ad-4Dl"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="400" id="dUC-Tw-a35">
-                                        <rect key="frame" x="0.0" y="310" width="600" height="400"/>
+                                        <rect key="frame" x="0.0" y="228" width="600" height="400"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dUC-Tw-a35" id="qh7-3h-Vkx">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="399"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UG4-N7-UwG">
-                                                    <rect key="frame" x="8" y="37" width="126" height="30"/>
-                                                    <state key="normal" title="Snap from camera"/>
-                                                    <connections>
-                                                        <action selector="takeAPhoto:" destination="GK2-5q-ewD" eventType="touchUpInside" id="GxF-uv-HMW"/>
-                                                    </connections>
-                                                </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ags-ha-G6g">
                                                     <rect key="frame" x="8" y="75" width="313" height="188"/>
                                                 </imageView>
@@ -216,6 +182,13 @@
                                                     <state key="normal" title="Pick from roll"/>
                                                     <connections>
                                                         <action selector="takeFromLibrary:" destination="GK2-5q-ewD" eventType="touchUpInside" id="3iK-UN-tCg"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UG4-N7-UwG">
+                                                    <rect key="frame" x="8" y="37" width="126" height="30"/>
+                                                    <state key="normal" title="Snap from camera"/>
+                                                    <connections>
+                                                        <action selector="takeAPhoto:" destination="GK2-5q-ewD" eventType="touchUpInside" id="GxF-uv-HMW"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -268,6 +241,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </barButtonItem>
+                                <barButtonItem style="plain" systemItem="flexibleSpace" id="N2O-AA-fba"/>
                                 <barButtonItem systemItem="compose" id="beH-rt-kkA">
                                     <connections>
                                         <action selector="sendCommentPressed:" destination="kg4-vc-FgI" id="wlc-V3-HVl"/>
@@ -436,6 +410,7 @@ CQ
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="btnComments" destination="1NJ-vX-XgF" id="2E4-uf-tie"/>
                         <outlet property="imageURL" destination="SbS-uz-vv4" id="BgW-YI-wtB"/>
                         <outlet property="mapView" destination="zyi-VB-ElA" id="NZg-Ux-ZVm"/>
                         <outlet property="messageTextView" destination="uTb-eo-Wqp" id="4DC-Bh-1NQ"/>
